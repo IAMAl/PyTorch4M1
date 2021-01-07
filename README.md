@@ -23,4 +23,4 @@ $cd pytorch
 $/usr/bin/python3 setup.py build
 
 ### Install
-$sudo python3 setup.py install && python3 -c "import torch"
+$sudo /usr/bin/python3 setup.py develop && /usr/bin/python3 -c "import torch"
