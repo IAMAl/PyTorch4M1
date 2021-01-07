@@ -15,9 +15,6 @@ $=brew install openblas
 ### Download Source-code of PyTorch
 $git clone --recursive https://github.com/pytorch/pytorch
 $cd pytorch
-# if you are updating an existing checkout
-$git submodule sync
-$git submodule update --init --recursive
 
 ### Paste three files to the pytoch directory
 **NOTE** OpenCV will be not installed, if you want it then you need to set "OK" in the cmake file.
