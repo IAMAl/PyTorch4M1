@@ -4,7 +4,7 @@
 - Python 3.8.2 (Pre-installed)
 - macOS Big Sur (ver.11.1)
 
-## Prerequisite Instration
+## Prerequisite Installation
 
 ### homebrew
 https://zenn.dev/ress/articles/069baf1c305523dfca3d
