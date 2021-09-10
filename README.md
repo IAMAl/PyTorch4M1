@@ -1,5 +1,6 @@
 # PyTorch Build for Apple Silicon
-
+**NOTE**: PyTorch supports Apple Silicon now (you can install with pip)
+This document is usefule only for scratch build from source code for Apple Silicon.
 ## Test Environment
 - Python 3.8.2 (Pre-installed)
 - venv
@@ -8,6 +9,7 @@
 ## Prerequisite Installation
 
 ### homebrew
+**NOTE** Outdated: homebrew supports Apple Silicon now
 https://zenn.dev/ress/articles/069baf1c305523dfca3d
 
 ### OpenBLAS for Apple Silicon
