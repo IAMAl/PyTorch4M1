@@ -82,5 +82,11 @@ $ USE_OPENCV=1 python3 setup.py build
 $ python3 setup.py bdist bdist_wheel
 ```
 
+### BONUS: Install torchvision
+
+```bash
+$ conda install torchvision -c pytorch
+```
+
 ### install
 You can use **pip install** for the wheel file.
