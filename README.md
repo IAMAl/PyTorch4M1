@@ -1,45 +1,49 @@
 # PyTorch Build for Apple Silicon
-**NOTE**: PyTorch supports Apple Silicon now (you can install with pip)
-
-This document is useful only for scratch build from source code for Apple Silicon.
+**NOTE**: This document is useful only for **scratch build** from source code for Apple Silicon.
 
 ## Work-flow
 - install prerequisites
+- download pytorch source from repository
 - install pytorch through a wheel-build
 
 ## Test Environment
-- Python 3.8.2 (Pre-installed)
-- venv
-- macOS Big Sur (ver.11.1)
-
+- Python 3.9.8
+- macOS Montorey (ver.12.0.1)
+- PyTorch 1.12 (2022/02/23@JST)
 ## Prerequisite Installation
 
-### homebrew
-**NOTE** Outdated: homebrew supports Apple Silicon now
+### - CMake
+```
+$brew install cmake
+```
+### - OpenBLAS
+```
+$brew install openblas
+```
+### - Yaml
+```
+$python3 -m pip install pyyaml
+```
 
-https://zenn.dev/ress/articles/069baf1c305523dfca3d
-
-### OpenBLAS for Apple Silicon
-This is based on above setting.
-Currently OpenBLAS supports M1.
-
-$=brew install openblas
-
-### Download Source-code of PyTorch
+## Download Source-code of PyTorch
+```
 git clone --recursive https://github.com/pytorch/pytorch
+```
 
 Enter to the directory;
-
+```
 $cd pytorch
-
-### Paste three files to the pytoch directory
-**NOTE** if you want OpenCV setting then you need to set "OK" in the cmake file.
-
-### Build
+```
+## Build
+### - Compile Sorce-Code
+Compile with berrow command;
+```
 $python3 setup.py build
-
-### Build Wheel
+```
+### - Build Wheel
+```
 $python3 setup.py bdist bdist_wheel
-
-### install
+```
+## install
+Wheel file is in "dist" directory.
 You can use **pip install** for the wheel file.
