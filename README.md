@@ -107,10 +107,12 @@ Wheel file is in "dist" directory.
 You can use **pip install** for the wheel file.
 
 ## Build for Standard-Install
+### - Compile Sorce-Code
 Compile with berrow command;
 ```
 $python3 setup.py build
 ```
+### - Install
 ```
 python3 setup.py develop && python3 -c "import torch"
 ```
