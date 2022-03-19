@@ -37,10 +37,30 @@ $cd pytorch
 ```
 
 ## Setting CMakeList.txt
+pThead is not supported on OS-X;
+```
+set(THREADS_PREFER_PTHREAD_FLAG OFF)
+```
+
+OS-X does not support Microsoft VisualStudio, so comment out between these lines;
+```
+if(MSVC)
+```
+and
+```
+endif(MSVC)
+```
+
+And, setting APPLE as **TRUE**.
+
 At line 184,
 Apple Silicon does not support NVIDIA's CUDA;
 ```
 option(USE_CUDA "Use CUDA" OFF)
+```
+Apple Silicon does not support NVIDIA's cuDNN;
+```
+USE_CUDNN "Use cuDNN" OFF
 ```
 
 At line 193,
@@ -72,7 +92,7 @@ Apple Silicon does not supprt OpenMP;
 ```
 option(USE_OPENMP "Use OpenMP for parallel code" OFF)
 ```
-## Build
+## Build for Wheel-based Install
 ### - Compile Sorce-Code
 Compile with berrow command;
 ```
@@ -85,3 +105,8 @@ $python3 setup.py bdist bdist_wheel
 ## install
 Wheel file is in "dist" directory.
 You can use **pip install** for the wheel file.
+
+## Build for Install
+```
+python3 setup.py develop && python3 -c "import torch"
+```
