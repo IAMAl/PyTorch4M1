@@ -4,7 +4,7 @@
 ## Work-flow
 - install prerequisites
 - download pytorch source from repository
-- install pytorch through a wheel-build
+- install pytorch through a wheel-build, or standard install
 
 ## Test Environment
 - Python 3.9.8
@@ -102,11 +102,15 @@ $python3 setup.py build
 ```
 $python3 setup.py bdist bdist_wheel
 ```
-## install
+### - Install
 Wheel file is in "dist" directory.
 You can use **pip install** for the wheel file.
 
-## Build for Install
+## Build for Standard-Install
+Compile with berrow command;
+```
+$python3 setup.py build
+```
 ```
 python3 setup.py develop && python3 -c "import torch"
 ```
