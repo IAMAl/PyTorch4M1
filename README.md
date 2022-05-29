@@ -3,8 +3,8 @@
 
 ## Work-flow
 - install prerequisites
-- download pytorch source from repository
-- install pytorch through a wheel-build, or standard install
+- download PyTorch source from repository
+- install PyTorch through a wheel-build, or standard install
 
 ## Test Environment
 - Python 3.9.8
@@ -26,12 +26,12 @@ $brew install openblas
 $python3 -m pip install pyyaml
 ```
 
-## Download Source-code of PyTorch
+## Download the source-code of PyTorch
 ```
 git clone --recursive https://github.com/pytorch/pytorch
 ```
 
-Enter to the directory;
+Enter the directory;
 ```
 $cd pytorch
 ```
@@ -42,7 +42,7 @@ pThead is not supported on OS-X;
 set(THREADS_PREFER_PTHREAD_FLAG OFF)
 ```
 
-OS-X does not support Microsoft VisualStudio, so comment out between these lines;
+OS-X does not support Microsoft VisualStudio, so comment-out between these lines;
 ```
 if(MSVC)
 ```
@@ -64,37 +64,37 @@ USE_CUDNN "Use cuDNN" OFF
 ```
 
 At line 193,
-Applie Silicon does not support AMD's ROCm;
+Apple Silicon does not support AMD's ROCm;
 ```
 option(USE_ROCM "Use ROCm" OFF)
 ```
 
 At line 230,
-Apple Silicon does not supprt NVIDIA's NCCL Library;
+Apple Silicon does not support NVIDIA's NCCL Library;
 ```
     USE_NCCL "Use NCCL" OFF
 ```
 At line 232,
-Apple Silicon does not supprt AMD's RCCL Library;
+Apple Silicon does not support AMD's RCCL Library;
 ```
 cmake_dependent_option(USE_RCCL "Use RCCL" OFF
 ```
 
 At line 243,
-Apple Silicon does not supprt NUMA Memory;
+Apple Silicon does not support NUMA Memory;
 ```
     USE_NUMA "Use NUMA. Only available on Linux." OFF
 ```
 
 
 At line 252,
-Apple Silicon does not supprt OpenMP;
+Apple Silicon does not support OpenMP;
 ```
 option(USE_OPENMP "Use OpenMP for parallel code" OFF)
 ```
 ## Build for Wheel-based Install
 ### - Compile Sorce-Code
-Compile with berrow command;
+Compile with below command;
 ```
 $python3 setup.py build
 ```
@@ -108,7 +108,7 @@ You can use **pip install** for the wheel file.
 
 ## Build for Standard-Install
 ### - Compile Sorce-Code
-Compile with berrow command;
+Compile with below command;
 ```
 $python3 setup.py build
 ```
